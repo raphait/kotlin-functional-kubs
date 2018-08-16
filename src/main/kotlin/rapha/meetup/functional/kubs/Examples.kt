@@ -67,7 +67,4 @@ fun main(args: Array<String>) {
     mutableSetOf("A", "B", "C")
     mutableMapOf(1 to "A", 2 to "B")
 
-
-
-
 }
