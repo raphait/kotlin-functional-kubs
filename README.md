@@ -1,5 +1,7 @@
 # kotlin-functional-kubs
 
+Run: ./gradlew build
+
 Slides: [kotlin-functional-kubs](https://slides.com/raphait/k)
 
 KataProblem: [Inverse Captcha ](https://adventofcode.com/2017/day/1)
