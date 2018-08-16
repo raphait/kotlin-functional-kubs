@@ -4,11 +4,27 @@ This is the exercise for our [Taste Of Kotlin](https://www.meetup.com/Functional
 
 Corresponding slides: [kotlin-functional-kubs](https://slides.com/raphait/k)
 
+## Setting up
+
+Start by cloning this repository:
+```
+$ git clone https://github.com/raphait/kotlin-functional-kubs.git
+```
+
+We recommend installing [IntelliJ IDEA](https://kotlinlang.org/docs/tutorials/getting-started.html) to modify the code. You should be able to open the project in IntelliJ and build and run the tests.
+
+Once you have the repo cloned, cd to the project directory and run:
+```
+./gradlew test
+```
+
+You should see some tests failing. If you do, all good! Up to you to fix them by following the instructions below.
+
 ## The Task
 
 We'll be solving [Problem 1 of Advent Of Code 2017](https://adventofcode.com/2017/day/1)
 
-There are 2 parts to the problem. Start with part 1 and continue with part 2 when you're happy with your solution.
+There are 2 parts to the problem. Start with part 1 and continue with part 2 once you're happy with your solution.
 
 ### Part 1
 
@@ -25,6 +41,14 @@ For example:
 * 1234 produces 0 because no digit matches the next.
 * 91212129 produces 9 because the only digit that matches the next one is the last digit, 9.
 
+**Open `src/main/kotlin/functionalkubs/Part1.kt` and implement the captcha() method to make the tests pass.**
+
+Protip: you can run the test suite for part 1 only with:
+
+```
+./gradlew test --tests functionalkubs.Part1Test
+```
+
 ### Part 2
 
 You notice a progress bar that jumps to 50% completion. Apparently, the door isn't yet satisfied, but it did emit a star as encouragement. The instructions change:
@@ -38,19 +62,13 @@ For example:
 * 123425 produces 4, because both 2s match each other, but no other digit has a match.
 * 123123 produces 12.
 * 12131415 produces 4.
-What is the solution to your new captcha?
 
-## How do I make changes to the code?
+**Open `src/main/kotlin/functionalkubs/Part2.kt` and implement the captcha() method to make the tests pass.**
 
-Mention where to find the function.
+Protip: you can run the test suite for part 1 only with:
 
-Also intellij setup
-
-## How do I test my solution?
-
-Run: 
 ```
-./gradlew test
+./gradlew test --tests functionalkubs.Part2Test
 ```
 
 # References
