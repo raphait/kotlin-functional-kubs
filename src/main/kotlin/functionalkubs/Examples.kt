@@ -1,5 +1,7 @@
 package functionalkubs
 
+typealias Name = String
+
 fun main(args: Array<String>) {
     println("Hello, World")
 
@@ -40,7 +42,7 @@ fun main(args: Array<String>) {
     }
 
     //Classes
-    class FormalPerson( val title : String, val firstName : String, val surname : String) {
+    class FormalPerson(val title: String, val firstName: String, val surname: String) {
         fun greeting() = "$title $surname, $firstName"
     }
 
@@ -49,7 +51,7 @@ fun main(args: Array<String>) {
     fun FormalPerson.infiormalGreeting() = "whats the craic $firstName?"
 
     //Data classes
-    data class Person(val name: String, var age: Int) // equals, hashCode, toString, copy for free :)
+    data class Person(val name: Name, var age: Int) // equals, hashCode, toString, copy for free :)
 
     val mike = Person("Mike", 23)
     println(mike == Person("Mike", 23))
@@ -58,15 +60,40 @@ fun main(args: Array<String>) {
 
     //COLLECTION LITERALS
     //read only
-    listOf(1,2,3,4)
+    listOf(1, 2, 3, 4)
     setOf("A", "B", "C")
     mapOf(1 to "A", 2 to "B")
 
     //mutable
-    mutableListOf(1,2,3,4)
+    mutableListOf(1, 2, 3, 4)
     mutableSetOf("A", "B", "C")
     mutableMapOf(1 to "A", 2 to "B")
 
+    data class Fruit(val name: String, val price: Double)
 
+    data class Customer(val name: String, val city: String, val preferences: Set<Fruit>)
 
+    val apple = Fruit("apple", 5.0)
+    val banana = Fruit("banana", 5.0)
+    val strawberry = Fruit("straeberry", 10.0)
+
+    val customers = listOf(
+        Customer("Nelson", "SP", setOf(apple)),
+        Customer("Maria", "Rio", setOf(strawberry)))
+
+    val fruits = listOf(apple, strawberry, banana)
+
+    customers
+        .map { c -> c.name }
+        .forEach(::println)
+
+    customers
+        .flatMap { it.preferences }
+        .forEach(::print)
+
+    println(
+        customers
+            .flatMap { it.preferences }
+            .fold(0.0, { acc, f -> acc + f.price })
+    )
 }
