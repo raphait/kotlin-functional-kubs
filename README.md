@@ -11,7 +11,7 @@ Start by cloning this repository:
 $ git clone https://github.com/raphait/kotlin-functional-kubs.git
 ```
 
-We recommend installing [IntelliJ IDEA](https://kotlinlang.org/docs/tutorials/getting-started.html) to modify the code. You should be able to open the project in IntelliJ and build and run the tests.
+We recommend installing [IntelliJ IDEA](https://kotlinlang.org/docs/tutorials/getting-started.html) to modify the code. You should be able to open the project in IntelliJ and build and run the tests. If you want to use another editor, that's totally fine too. It's possible to build and test the project using gradle on the command line.
 
 Once you have the repo cloned, cd to the project directory and run:
 ```
