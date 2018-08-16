@@ -1,4 +1,4 @@
-package rapha.meetup.functional.kubs
+package functionalkubs
 
 fun main(args: Array<String>) {
     println("Hello, World")

@@ -1,4 +1,4 @@
-package rapha.meetup.functional.kubs
+package functionalkubs
 
 import io.kotlintest.matchers.contain
 import io.kotlintest.matchers.should

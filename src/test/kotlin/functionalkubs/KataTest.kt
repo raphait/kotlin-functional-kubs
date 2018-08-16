@@ -1,5 +1,6 @@
-package rapha.meetup.functional.kubs
+package functionalkubs
 
+import functionalkubs.myFunction
 import io.kotlintest.matchers.shouldBe
 import org.junit.Test
 
